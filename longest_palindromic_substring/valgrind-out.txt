@@ -1,0 +1,109 @@
+==7199== Memcheck, a memory error detector
+==7199== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==7199== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==7199== Command: ./main.out
+==7199== Parent PID: 6316
+==7199== 
+--7199-- 
+--7199-- Valgrind options:
+--7199--    --leak-check=full
+--7199--    --show-leak-kinds=all
+--7199--    --track-origins=yes
+--7199--    --verbose
+--7199--    --log-file=valgrind-out.txt
+--7199-- Contents of /proc/version:
+--7199--   Linux version 5.3.0-42-generic (buildd@lcy01-amd64-019) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #34~18.04.1-Ubuntu SMP Fri Feb 28 13:42:26 UTC 2020
+--7199-- 
+--7199-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2
+--7199-- Page sizes: currently 4096, max supported 4096
+--7199-- Valgrind library directory: /usr/lib/valgrind
+--7199-- Reading syms from /home/juliusz/Dev/LeetCode/C/longest_palindromic_substring/main.out
+--7199-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--7199--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--7199--   .. CRC mismatch (computed 1b7c895e wanted 2943108a)
+--7199--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--7199--   .. CRC is valid
+--7199-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--7199--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--7199--   .. CRC mismatch (computed 41ddb025 wanted 9972f546)
+--7199--    object doesn't have a symbol table
+--7199--    object doesn't have a dynamic symbol table
+--7199-- Scheduler: using generic scheduler lock implementation.
+--7199-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==7199== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-7199-by-juliusz-on-???
+==7199== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-7199-by-juliusz-on-???
+==7199== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-7199-by-juliusz-on-???
+==7199== 
+==7199== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==7199== don't want to do, unless you know exactly what you're doing,
+==7199== or are doing some strange experiment):
+==7199==   /usr/lib/valgrind/../../bin/vgdb --pid=7199 ...command...
+==7199== 
+==7199== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==7199==   /path/to/gdb ./main.out
+==7199== and then give GDB the following command
+==7199==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=7199
+==7199== --pid is optional if only one valgrind process is running
+==7199== 
+--7199-- REDIR: 0x401f2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580608c1 (???)
+--7199-- REDIR: 0x401f0d0 (ld-linux-x86-64.so.2:index) redirected to 0x580608db (???)
+--7199-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--7199--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--7199--   .. CRC mismatch (computed 50df1b30 wanted 4800a4cf)
+--7199--    object doesn't have a symbol table
+--7199-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--7199--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--7199--   .. CRC mismatch (computed f893b962 wanted 95ee359e)
+--7199--    object doesn't have a symbol table
+==7199== WARNING: new redirection conflicts with existing -- ignoring it
+--7199--     old: 0x0401f2f0 (strlen              ) R-> (0000.0) 0x580608c1 ???
+--7199--     new: 0x0401f2f0 (strlen              ) R-> (2007.0) 0x04c32db0 strlen
+--7199-- REDIR: 0x401d360 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c33ee0 (strcmp)
+--7199-- REDIR: 0x401f830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c374f0 (mempcpy)
+--7199-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--7199--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--7199--   .. CRC mismatch (computed b1c74187 wanted 042cc048)
+--7199--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--7199--   .. CRC is valid
+--7199-- REDIR: 0x4edac70 (libc.so.6:memmove) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9d40 (libc.so.6:strncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edaf50 (libc.so.6:strcasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9790 (libc.so.6:strcat) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9d70 (libc.so.6:rindex) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edc7c0 (libc.so.6:rawmemchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edade0 (libc.so.6:mempcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edac10 (libc.so.6:bcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9d00 (libc.so.6:strncmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9800 (libc.so.6:strcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edad40 (libc.so.6:memset) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ef80f0 (libc.so.6:wcschr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9ca0 (libc.so.6:strnlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9870 (libc.so.6:strcspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edafa0 (libc.so.6:strncasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9840 (libc.so.6:strcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edb0e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9da0 (libc.so.6:strpbrk) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed97c0 (libc.so.6:index) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ed9c70 (libc.so.6:strlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ee46c0 (libc.so.6:memrchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edaff0 (libc.so.6:strcasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edabe0 (libc.so.6:memchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4ef8eb0 (libc.so.6:wcslen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4eda050 (libc.so.6:strspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edaf20 (libc.so.6:stpncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edaef0 (libc.so.6:stpcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edc7f0 (libc.so.6:strchrnul) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4edb040 (libc.so.6:strncasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--7199-- REDIR: 0x4fca3c0 (libc.so.6:__strrchr_avx2) redirected to 0x4c32730 (rindex)
+--7199-- REDIR: 0x4fca590 (libc.so.6:__strlen_avx2) redirected to 0x4c32cf0 (strlen)
+--7199-- REDIR: 0x4ed3070 (libc.so.6:malloc) redirected to 0x4c2faa0 (malloc)
+--7199-- REDIR: 0x4ed3950 (libc.so.6:free) redirected to 0x4c30cd0 (free)
+==7199== 
+==7199== HEAP SUMMARY:
+==7199==     in use at exit: 0 bytes in 0 blocks
+==7199==   total heap usage: 1 allocs, 1 frees, 3 bytes allocated
+==7199== 
+==7199== All heap blocks were freed -- no leaks are possible
+==7199== 
+==7199== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==7199== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
