@@ -6,7 +6,7 @@
 char *longestPalindrome(char *s);
 
 int main(){
-    char test[] = "babaddabx";
+    char test[] = "";
     char *longest = longestPalindrome(test);
     puts(longest);
     printf("%ld\n", strlen(longest));
@@ -35,7 +35,10 @@ char *longestPalindrome(char *s){
         }
     }
     //scan for even palindrome
-    for(int i = 0; i < sLen - 1; ++i){
+    if(max == 0){
+        max = 1;
+    }
+    for(int i = max - 1; i < sLen - abs(max); ++i){
         if(s[i] == s[i + 1]){
             int dif = 1;
             while(i - dif >= 0 && i + dif + 1 < sLen){
