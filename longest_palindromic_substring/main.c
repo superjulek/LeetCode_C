@@ -19,7 +19,7 @@ char *longestPalindrome(char *s){
     int max = 0;
     int middle = 0;
     //scan for uneven palindrome
-    for(int i = 0; i < sLen; ++i){
+    for(int i = 0; i < sLen - max; ++i){
         int dif = 1;
         while(i - dif >= 0 && i + dif < sLen){
             if(s[i - dif] == s[i + dif]){
