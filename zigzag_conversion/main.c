@@ -8,6 +8,7 @@ int main(){
     char test[] = "ArekMieszkaWZgierzu";
     char *output = convert(test, 4);
     puts(output);
+    free(output);
     return 0;
 }
 
