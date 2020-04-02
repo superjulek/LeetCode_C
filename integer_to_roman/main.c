@@ -12,7 +12,7 @@ int main() {
 }
 
 char* intToRoman(int num) {
-    int n = 20; //TODO
+    int n = 10;
     int counter = 0;
     char* result = (char*)calloc(n, sizeof(char));
     int m = num / 1000; //number of 1000
@@ -22,7 +22,7 @@ char* intToRoman(int num) {
     int x = num / 10; //number of 10
     num -= x * 10;
     int i = num; //number of 1
-    printf("%d %d %d %d\n", m, c, x, i);
+    //printf("%d %d %d %d\n", m, c, x, i);
     switch (m) {
     case 0:
         break;
